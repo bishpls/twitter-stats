@@ -1,0 +1,17 @@
+{
+  "name": "twitter-stats",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Twitter/X Sentiment & Trend Analysis for @BishPlsOk",
+  "scripts": {
+    "ingest": "node src/collect/ingest.mjs",
+    "process": "node scripts/process.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.0.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "mongoose": "^8.0.0"
+  }
+}

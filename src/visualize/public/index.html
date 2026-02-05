@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@BishPlsOk — Sentiment & Trend Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>@BishPlsOk Sentiment & Trend Analysis</h1>
+    <p class="subtitle">Emotion profile, sentiment trends, and engagement insights</p>
+
+    <!-- Summary Cards -->
+    <div class="cards" id="summary-cards">
+      <div class="loading">Loading summary...</div>
+    </div>
+
+    <!-- Timeline + Radar -->
+    <div class="chart-row">
+      <div class="chart-section">
+        <h2>Sentiment Timeline (Rolling Average)</h2>
+        <div class="filters">
+          <select id="timeline-window">
+            <option value="7" selected>7-day</option>
+            <option value="14">14-day</option>
+            <option value="30">30-day</option>
+          </select>
+        </div>
+        <div class="chart-container"><canvas id="timeline-chart"></canvas></div>
+      </div>
+      <div class="chart-section">
+        <h2>Emotion Profile</h2>
+        <div class="chart-container"><canvas id="radar-chart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Emotion Timeline Breakdown -->
+    <div class="chart-section">
+      <h2>Emotion Trends Over Time</h2>
+      <div class="filters">
+        <select id="emotion-select" multiple size="4">
+          <!-- populated by JS -->
+        </select>
+      </div>
+      <div class="chart-container tall"><canvas id="emotion-timeline-chart"></canvas></div>
+    </div>
+
+    <!-- Scatter -->
+    <div class="chart-section">
+      <h2>Engagement vs Sentiment</h2>
+      <div class="chart-container tall"><canvas id="scatter-chart"></canvas></div>
+    </div>
+
+    <!-- Top Tweets by Emotion -->
+    <div class="chart-section">
+      <h2>Top Tweets by Emotion</h2>
+      <div class="filters">
+        <select id="top-emotion-filter">
+          <!-- populated by JS -->
+        </select>
+      </div>
+      <div class="tweet-grid" id="top-tweets"></div>
+    </div>
+
+    <!-- Dominant Emotion Distribution -->
+    <div class="chart-section">
+      <h2>Dominant Emotion Distribution</h2>
+      <div class="chart-container"><canvas id="distribution-chart"></canvas></div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
