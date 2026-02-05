@@ -40,7 +40,7 @@ Built for [@BishPlsOk](https://x.com/BishPlsOk) but configurable for any public 
 ## Setup
 
 ```bash
-git clone https://github.com/bishplsok/twitter-stats.git
+git clone https://github.com/bishpls/twitter-stats.git
 cd twitter-stats
 npm install
 cp .env.example .env
